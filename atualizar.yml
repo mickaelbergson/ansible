@@ -1,4 +1,4 @@
- ---
+---
 - name: Atualizar Google Chrome no Windows
   hosts: windows  # Certifique-se de que este grupo de hosts esteja configurado no seu inventário
   become: yes
