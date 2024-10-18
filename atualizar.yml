@@ -1,0 +1,13 @@
+ ---
+- name: Atualizar Google Chrome no Windows
+  hosts: windows  # Certifique-se de que este grupo de hosts esteja configurado no seu inventário
+  become: yes
+  tasks:
+    - name: Garantir que o Chocolatey esteja instalado
+      win_chocolatey:
+        state: present
+
+    - name: Atualizar o Google Chrome para a versão mais recente
+      win_chocolatey:
+        name: googlechrome
+        state: latest  # 'latest' garante que a versão mais recente seja instalada
